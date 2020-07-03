@@ -1,8 +1,7 @@
-
 from django.shortcuts import redirect, render
 from django.urls import reverse
 
-from . forms import UserCreationForm
+from .forms import UserCreationForm
 
 
 def register_view(request):
@@ -11,5 +10,9 @@ def register_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse('register'))
-    return render(request, 'register.html', {'form': form})
+            return redirect(reverse('login'))
+    return render(request, 'accounts/register.html', {'form': form})
+
+
+def home(request):
+    return render(request, 'accounts/home.html')
