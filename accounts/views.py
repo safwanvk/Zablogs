@@ -1,13 +1,13 @@
 from django.shortcuts import redirect, render
 from django.urls import reverse
 
-from .forms import UserCreationForm
+from .forms import CustomerCreationForm
 
 
 def register_view(request):
-    form = UserCreationForm()
+    form = CustomerCreationForm()
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomerCreationForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect(reverse('login'))
