@@ -1,7 +1,11 @@
 {% extends 'accounts/base.html' %}
 {% block title %} Home{% endblock title %}
 {% block content %}
+{% if user.is_authenticated %}
 <h3>Hi {{ request.user.username }} welcome.</h3>
+{% else %}
+<h3>Hi Welcome to Zablog. pls <a href="{% url 'login' %}">Sign in</a> </h3>
+{% endif %}
 
 {% endblock content %}
 <body>

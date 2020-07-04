@@ -11,7 +11,7 @@
     {% csrf_token %}
     {{ form|crispy }}
     <input type="Submit" class="btn btn-success btn-sm" value="Sign in"><br>
-    Forgot password? <a href="{% url 'reset-password' %}" >Reset password</a><br>
+    Forgot password? <a href="{% url 'password_reset' %}" >Reset password</a><br>
     New to Zablog? <a href="{% url 'register' %}" >Create an account. </a>
 </form>
 </div>
