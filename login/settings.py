@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f#_9@m=s3-#0m9m54nuas8cr_ge21v(ime+7)x4)s_1&fp0vu5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://zablogs.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 

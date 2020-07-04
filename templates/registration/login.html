@@ -5,14 +5,14 @@
 
 <div class="container">
 
-    <center><h1>Sign in to Zablog</h1></center>
+    <center><h1>Sign in to Zablogs</h1></center>
 
 <form method="POST">
     {% csrf_token %}
     {{ form|crispy }}
     <input type="Submit" class="btn btn-success btn-sm" value="Sign in"><br>
     Forgot password? <a href="{% url 'password_reset' %}" >Reset password</a><br>
-    New to Zablog? <a href="{% url 'register' %}" >Create an account. </a>
+    New to Zablogs? <a href="{% url 'register' %}" >Create an account. </a>
 </form>
 </div>
 {% endblock content %}
